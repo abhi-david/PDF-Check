@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!--Main Content-->
+ <div class="container home-ctn"> 
+  <div class="alert-ctn">
+    {% if error %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>Error!</strong> {{ error }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+  </div>
+  <!-- Input Container --> 
+  <div class="upload-ctn">
+    <div class="card">
+      <div class="card-header">
+        Upload old JSON File 
+      </div>
+      <div class="card-body">
+        <div class="pdfForm">
+          <form id="jsonForm1" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <input class="form-control" type="file" id="formFile1" name="inputJSON1" accept=".json">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        Upload new JSON File 
+      </div>
+      <div class="card-body">
+        <div class="pdfForm">
+          <form id="jsonForm2" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <input class="form-control" type="file" id="formFile2" name="inputJSON2" accept=".json">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary" id="submitBtnjson">Compare</button>
+  </div>
+  </div>
+
+  <div class="show_card hidden" id="show_cardd">
+    
+    <div class="card2 " >
+      <div class="header" >Result</div>
+      <div class="card-content2" id="cardno1d"></div>
+    </div>
+  </div>
+
+  <!--Output Container-->
+  <div class="spinner-ctn hidden" id="loadingSpinnerjson">
+    <div class="spinner-border text-dark" role="status">
+    </div>
+  </div>
+  <div class="timeline-ctn">
+
+
+
+
+
+
+
+
+
+</div>
+<!-- <div class="show_card hidden" id="show_carddjson">
+    
+  <div class="card2 " >
+    <div class="header" >Result</div>
+    <div class="card-content2" id="cardno1djson"></div>
+  </div> -->
+<!-- </div>  -->
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css"
+    />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+  <body>
+    <div id="myDiffElementJSON"></div>
+  </body>
+
+<!-- <link rel="stylesheet" href="path/to/diff2html.min.css" /> -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <!-- <script src="../static/js/diff2html.min.js"></script> -->
+
+  <script  src="../static/js/main.js"></script>
+  <!-- <link rel="stylesheet" href="" /> -->
+<!-- <script type="module"  src="../node_modules/diff2html/bundles/js/diff2html.js"></script> -->
+
+{% endblock %}
