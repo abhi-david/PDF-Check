@@ -11,13 +11,13 @@ import zipfile
 import json
 import logging
 import os.path
-from adobe.pdfservices.operation.auth.credentials import Credentials
-from adobe.pdfservices.operation.exception.exceptions import ServiceApiException, ServiceUsageException, SdkException
-from adobe.pdfservices.operation.pdfops.options.extractpdf.extract_pdf_options import ExtractPDFOptions
-from adobe.pdfservices.operation.pdfops.options.extractpdf.extract_element_type import ExtractElementType
-from adobe.pdfservices.operation.execution_context import ExecutionContext
-from adobe.pdfservices.operation.io.file_ref import FileRef
-from adobe.pdfservices.operation.pdfops.extract_pdf_operation import ExtractPDFOperation
+# from adobe.pdfservices.operation.auth.credentials import Credentials
+# from adobe.pdfservices.operation.exception.exceptions import ServiceApiException, ServiceUsageException, SdkException
+# from adobe.pdfservices.operation.pdfops.options.extractpdf.extract_pdf_options import ExtractPDFOptions
+# from adobe.pdfservices.operation.pdfops.options.extractpdf.extract_element_type import ExtractElementType
+# from adobe.pdfservices.operation.execution_context import ExecutionContext
+# from adobe.pdfservices.operation.io.file_ref import FileRef
+# from adobe.pdfservices.operation.pdfops.extract_pdf_operation import ExtractPDFOperation
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
 
 
