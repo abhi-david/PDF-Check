@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'PDFValidate'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_369E0F2D7317415DA509B4C33B7AD0C8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_68B21A79971A4D90980F35701358CA5B }}
